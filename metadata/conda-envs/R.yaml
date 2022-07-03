@@ -1,0 +1,15 @@
+name: snake-single-r
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r=4.1
+  - bioconductor-singlecellexperiment
+  - bioconductor-sparsematrixstats
+  - r-uwot
+  - r-irlba
+  - r-tidyverse
+  - r-irkernel
+  - r-mclust
+  - r-leidenalg
+  - bioconductor-batchelor

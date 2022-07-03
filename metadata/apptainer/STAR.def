@@ -1,0 +1,19 @@
+Bootstrap: docker
+From: ubuntu:20.04
+
+%post
+    apt-get -y update
+    apt-get install -y wget libgomp1
+    wget https://github.com/alexdobin/STAR/archive/2.7.10a.tar.gz
+    mkdir -p downloads
+    mv 2.7.10a.tar.gz downloads/
+    mkdir -p tools
+    cd tools && tar -xzf ../downloads/2.7.10a.tar.gz
+
+
+%environment
+    export LC_ALL=C
+    export PATH=/tools/STAR-2.7.10a/bin/Linux_x86_64:$PATH
+
+%runscript
+    STAR $@

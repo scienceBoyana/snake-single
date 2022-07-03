@@ -1,0 +1,9 @@
+name: snake-single-scanpy
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+dependencies:
+  - scanpy
+  - python-igraph
+  - leidenalg
